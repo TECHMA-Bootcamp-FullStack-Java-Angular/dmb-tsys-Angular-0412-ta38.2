@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card mt-4 shadow p-3 mb-4">
+    <h2 class="">Administración de artículos</h2>
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="form" (submit)="addProduct()" >
+          <div class="form-group mt-2">
+            <label for="codigo">Código</label>
+            <input type="text"
+              class="form-control"
+              id="codigo"
+              name="codigo"
+              placeholder="Ingrese el código del artículo"
+              formControlName="codigo">
+          </div>
+          <div class="form-group  mt-2">
+            <label for="descripcion">Descripción</label>
+            <input type="text"
+              class="form-control"
+              id="descripcion"
+              name="descripcion"
+              placeholder="Ingrese la descripción del artículo"
+              formControlName="descripcion">
+          </div>
+          <div class="form-group  mt-2">
+            <label for="precio">Precio</label>
+            <input type="text"
+              class="form-control"
+              id="precio" name="precio"
+              placeholder="Ingrese el precio del artículo"
+              formControlName="precio">
+          </div>
+          <button style="width: 100%;"type="submit" class="btn btn-sm mt-3 btn-primary btn-block">Agregar</button>
+        </form>
+        <button style="width: 100%;" (click)="updateArray()" class="btn btn-sm mt-3 btn-warning btn-block">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
